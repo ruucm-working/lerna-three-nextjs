@@ -5,6 +5,7 @@ const crypto = require('crypto')
 const path = require('path')
 const util = require('util')
 const fs = require('fs-extra')
+const sass = require('node-sass')
 const postcss = require('postcss')
 const cssModules = require('postcss-modules')
 const tmp = require('tmp')
@@ -14,14 +15,14 @@ const writeFile = util.promisify(fs.writeFile)
 const ensureDir = util.promisify(fs.ensureDir)
 const pluginNamespace = 'esbuild-css-modules-plugin-namespace'
 
-const buildCssModulesJS = async (cssFullPath, options) => {
+const buildCssModulesJS = async (scssFullPath, options) => {
   const {
     localsConvention = 'camelCaseOnly',
     inject = true,
     generateScopedName,
   } = options
 
-  const css = await readFile(cssFullPath)
+  const { css } = sass.renderSync({ file: scssFullPath })
 
   let cssModulesJSON = {}
   const result = await postcss([
@@ -39,7 +40,7 @@ const buildCssModulesJS = async (cssFullPath, options) => {
   })
 
   const classNames = JSON.stringify(cssModulesJSON)
-  hash.update(cssFullPath)
+  hash.update(scssFullPath)
   const digest = hash.copy().digest('hex')
   return `
 const digest = '${digest}';
@@ -71,7 +72,7 @@ exports.cssPlugin = (options = {}) => {
       const { outdir, bundle } = build.initialOptions
 
       build.onResolve(
-        { filter: /\.modules?\.css$/, namespace: 'file' },
+        { filter: /\.modules?\.scss$/, namespace: 'file' },
         async (args) => {
           const sourceFullPath = path.resolve(args.resolveDir, args.path)
 
