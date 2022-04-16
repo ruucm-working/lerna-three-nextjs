@@ -8,6 +8,7 @@
     "bootstrap": "npm install; lerna bootstrap;",
     "package:website": "lerna run --scope website --stream dev",
     "package:shared": "lerna run --scope shared --stream serve",
+    "package:website-build": "lerna run --scope website --stream build",
     "start": "run-p --print-label package:*",
     "build": "lerna run --parallel build"
   },
