@@ -4,7 +4,7 @@
   "private": true,
   "license": "MIT",
   "scripts": {
-    "bootstrap": "yarn install; lerna bootstrap;",
+    "bootstrap": "npm install; lerna bootstrap;",
     "package:shadergradient": "lerna run --scope shadergradient --stream serve",
     "package:website": "lerna run --scope website --stream dev",
     "shadergradient-build": "lerna run --scope shadergradient --stream build",
