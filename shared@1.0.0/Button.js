@@ -1,7 +1,7 @@
 // src/Button.tsx
 import * as React from "react";
 
-// esbuild-css-modules-plugin-namespace:/tmp/tmp-1964-8LywtFtYZk0q/shared/src/Button.module.css.js
+// esbuild-css-modules-plugin-namespace:/tmp/tmp-1934-I7ie5k5vj7AO/shared/src/Button.module.css.js
 var digest = "1b2e08c15e90a6e829489386655ec31ad9e8fb39aaf95339de432d19fc198f3a";
 var css = `._button_f2yv0_1 {
   background-color: #c8d5ff;
