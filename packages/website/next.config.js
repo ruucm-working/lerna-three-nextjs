@@ -1,15 +1,13 @@
-const plugins = require('next-compose-plugins')
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
   enabled: process.env.ANALYZE === 'true',
 })
+const plugins = require('next-compose-plugins')
 
 const withOffline = require('next-offline')
-const withTM = require("next-transpile-modules")(["shared"]);
-
+const withTM = require('next-transpile-modules')(['shadergradient'])
 
 const nextConfig = {
   webpack(config, { isServer }) {
-
     // audio support
     config.module.rules.push({
       test: /\.(ogg|mp3|wav|mpe?g)$/i,

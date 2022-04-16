@@ -12,7 +12,7 @@ export const GradientMesh: React.FC<any> = () => {
   return (
     <mesh ref={mesh} rotation={[0.3, 0.3, 0]}>
       <boxGeometry args={[1, 1, 1]} />
-      <meshStandardMaterial color={'blue'} />
+      <meshStandardMaterial color={'green'} />
     </mesh>
   )
 }

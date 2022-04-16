@@ -2,7 +2,7 @@ import { useEffect, useRef } from 'react'
 import { OrbitControls, Preload } from '@react-three/drei'
 import { Canvas } from '@react-three/fiber'
 import * as fiber from '@react-three/fiber'
-import { FiberContextProvider } from 'shared'
+import { FiberContextProvider } from 'shadergradient'
 import useStore from '@/helpers/store'
 
 const LControl = () => {

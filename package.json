@@ -1,19 +1,19 @@
 {
-  "name": "shadergradient",
+  "name": "shadergradient-monorepo",
   "version": "0.1.0",
   "private": true,
   "license": "MIT",
   "scripts": {
     "bootstrap": "yarn install; lerna bootstrap;",
-    "package:shared": "lerna run --scope shared --stream serve",
+    "package:shadergradient": "lerna run --scope shadergradient --stream serve",
     "package:website": "lerna run --scope website --stream dev",
-    "shared-build": "lerna run --scope shared --stream build",
-    "shared-release": "lerna run --scope shared --stream release",
+    "shadergradient-build": "lerna run --scope shadergradient --stream build",
+    "shadergradient-release": "lerna run --scope shadergradient --stream release",
     "website-build": "lerna run --scope website --stream build",
     "start": "run-p --print-label package:*",
     "build": "lerna run --parallel build",
-    "eslint": "eslint --fix \"./packages/shared/src/**/*.{js,jsx,ts,tsx}\" \"./packages/website/src/**/*.{js,jsx,ts,tsx}\"",
-    "deploy": "cd packages/shared; yarn version; git push --tags; git push"
+    "eslint": "eslint --fix \"./packages/shadergradient/src/**/*.{js,jsx,ts,tsx}\" \"./packages/website/src/**/*.{js,jsx,ts,tsx}\"",
+    "deploy": "cd packages/shadergradient; yarn version; git push --tags; git push"
   },
   "dependencies": {
     "next": "12.1.4",

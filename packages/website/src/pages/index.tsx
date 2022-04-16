@@ -1,6 +1,6 @@
 import dynamic from 'next/dynamic'
 // Step 5 - delete Instructions components
-import { GradientMesh } from 'shared'
+import { GradientMesh } from 'shadergradient'
 import Instructions from '@/components/dom/Instructions'
 // import Shader from '@/components/canvas/Shader/Shader'
 

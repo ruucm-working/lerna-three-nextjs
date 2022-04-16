@@ -1,4 +1,4 @@
-import { Button } from 'shared'
+import { Button } from 'shadergradient'
 
 export default function Instructions() {
   return (
