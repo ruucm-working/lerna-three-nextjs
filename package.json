@@ -3,9 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "license": "MIT",
-  "main": "index.js",
   "scripts": {
-    "bootstrap": "npm install; lerna bootstrap;",
+    "bootstrap": "yarn install; lerna bootstrap;",
     "package:shared": "lerna run --scope shared --stream serve",
     "package:website": "lerna run --scope website --stream dev",
     "shared-build": "lerna run --scope shared --stream build",
