@@ -5,7 +5,6 @@
   "scripts": {
     "serve": "yarn; node esmbuild/esmbuild serve ./src 8001",
     "build": "yarn; node esmbuild/esmbuild build ./src dist",
-    "deploy": "yarn version; git push --tags; git push",
     "release": "yarn run build; mkdir -p release; cp -Rf dist release/$npm_package_name@$npm_package_version"
   },
   "dependencies": {
