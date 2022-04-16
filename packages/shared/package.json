@@ -1,13 +1,14 @@
 {
   "name": "shared",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "main": "src/index.tsx",
   "scripts": {
+    "version": "yarn version",
     "serve": "yarn; node esmbuild/esmbuild serve ./src 8001",
     "build": "yarn; node esmbuild/esmbuild build ./src dist",
     "release": "yarn run build; mkdir -p release; cp -Rf dist release/$npm_package_name@$npm_package_version"
   },
   "dependencies": {
-    "shared": "^1.0.0"
+    "shared": "^0.1.0"
   }
 }

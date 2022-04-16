@@ -1,6 +1,6 @@
 {
-  "name": "next-mono-repo",
-  "version": "1.0.3",
+  "name": "shadergradient",
+  "version": "0.1.0",
   "private": true,
   "license": "MIT",
   "main": "index.js",
@@ -8,13 +8,14 @@
     "bootstrap": "npm install; lerna bootstrap;",
     "package:shared": "lerna run --scope shared --stream serve",
     "package:website": "lerna run --scope website --stream dev",
+    "package:shared-version": "lerna run --scope shared --stream version",
     "package:shared-build": "lerna run --scope shared --stream build",
     "package:shared-release": "lerna run --scope shared --stream release",
     "package:website-build": "lerna run --scope website --stream build",
     "start": "run-p --print-label package:*",
     "build": "lerna run --parallel build",
     "eslint": "eslint --fix \"./packages/shared/src/**/*.{js,jsx,ts,tsx}\" \"./packages/website/src/**/*.{js,jsx,ts,tsx}\"",
-    "deploy": "yarn version; git push --tags; git push"
+    "deploy": "yarn package:shared-version; git push --tags; git push"
   },
   "dependencies": {
     "next": "12.1.4",
