@@ -12,7 +12,7 @@ var GradientMesh = () => {
   }, /* @__PURE__ */ React.createElement("boxGeometry", {
     args: [1, 1, 1]
   }), /* @__PURE__ */ React.createElement("meshStandardMaterial", {
-    color: "green"
+    color: "gold"
   }));
 };
 export {
