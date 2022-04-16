@@ -11,7 +11,7 @@
     "package:website-build": "lerna run --scope website --stream build",
     "start": "run-p --print-label package:*",
     "build": "lerna run --parallel build",
-    "eslint": "eslint --fix \"./packages/shared/src/**/*.{js,jsx,ts,tsx}\" \"./packages/website/src/**/*.{ts,tsx}\""
+    "eslint": "eslint --fix \"./packages/shared/src/**/*.{js,jsx,ts,tsx}\" \"./packages/website/src/**/*.{js,jsx,ts,tsx}\""
   },
   "dependencies": {
     "next": "12.1.4",

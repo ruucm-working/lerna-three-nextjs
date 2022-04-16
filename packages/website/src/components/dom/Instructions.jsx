@@ -1,5 +1,4 @@
-import {  Button  } from 'shared'
-
+import { Button } from 'shared'
 
 export default function Instructions() {
   return (
@@ -10,7 +9,7 @@ export default function Instructions() {
         maxWidth: 'calc(100% - 28px)',
       }}
     >
-      <Button buttonType="next">hey button</Button>
+      <Button buttonType='next'>hey button</Button>
 
       <p className='hidden mb-8 md:block'>
         This is a minimal starter for Nextjs + Threejs. Click on the cube to
