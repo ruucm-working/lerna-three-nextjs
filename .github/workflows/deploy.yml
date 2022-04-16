@@ -37,8 +37,8 @@ jobs:
         run: |
           cd main
           yarn
-          yarn run package:shadergradient-build
-          yarn run package:shadergradient-release
+          yarn run shadergradient-build
+          yarn run shadergradient-release
           cp -rf packages/shadergradient/release/* $GITHUB_WORKSPACE/pages/
       - name: Commit & Push
         run: |
