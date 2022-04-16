@@ -10,7 +10,7 @@ export function Button({ title = 'Title' }) {
       whileTap={{ scale: 0.7 }}
     >
       {title}
-      <span>heyy scss!</span>
+      <span>👀</span>
     </motion.button>
   )
 }
