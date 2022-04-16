@@ -6,8 +6,10 @@
   "main": "index.js",
   "scripts": {
     "bootstrap": "npm install; lerna bootstrap;",
-    "package:website": "lerna run --scope website --stream dev",
     "package:shared": "lerna run --scope shared --stream serve",
+    "package:website": "lerna run --scope website --stream dev",
+    "package:shared-build": "lerna run --scope shared --stream build",
+    "package:shared-release": "lerna run --scope shared --stream release",
     "package:website-build": "lerna run --scope website --stream build",
     "start": "run-p --print-label package:*",
     "build": "lerna run --parallel build",
