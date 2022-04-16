@@ -13,7 +13,7 @@ import styles from './Home.module.scss'
 const DOM = () => {
   return (
     <div className={styles.wrap}>
-      dom
+      next.js (website)
       <Button />
     </div>
   )
