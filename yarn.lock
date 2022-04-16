@@ -3857,6 +3857,11 @@ esbuild-openbsd-64@0.14.34:
   resolved "https://registry.yarnpkg.com/esbuild-openbsd-64/-/esbuild-openbsd-64-0.14.34.tgz#b9bc44b4f70031fb01b173b279daeffc4d4f54b7"
   integrity sha512-vmy9DxXVnRiI14s8GKuYBtess+EVcDALkbpTqd5jw4XITutIzyB7n4x0Tj5utAkKsgZJB22lLWGekr0ABnSLow==
 
+esbuild-plugin-glsl@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/esbuild-plugin-glsl/-/esbuild-plugin-glsl-1.1.0.tgz#7aa0fb8d12068aed3ab4894a0271ae6df03560c4"
+  integrity sha512-OBzCa/nRy/Vbm62DBzBnV25p1BfTpvFf2SP2Vv9Ls38sdEEuHzhYT5xTOh3Ghu+77VI4iZsOam19cmjwq5RcJQ==
+
 esbuild-sunos-64@0.14.34:
   version "0.14.34"
   resolved "https://registry.yarnpkg.com/esbuild-sunos-64/-/esbuild-sunos-64-0.14.34.tgz#512dd6085ac1a0dccc20c5f932f16a618bea409c"

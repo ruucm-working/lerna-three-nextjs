@@ -1,5 +1,6 @@
 const { join, resolve } = require('path')
 const esbuild = require('esbuild')
+const { glsl } = require('esbuild-plugin-glsl')
 const globby = require('globby')
 const { cssPlugin } = require('./plugin.css')
 const { esmPlugin } = require('./plugin.esm')
@@ -23,7 +24,7 @@ async function getBuildOptions(path) {
       'framer',
       'framer-motion',
     ],
-    plugins: [esmPlugin, cssPlugin({ inject: true })],
+    plugins: [esmPlugin, cssPlugin({ inject: true }), glsl({ minify: true })],
   }
 }
 

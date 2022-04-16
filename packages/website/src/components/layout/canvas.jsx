@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react'
 import { OrbitControls, Preload } from '@react-three/drei'
+import * as drei from '@react-three/drei'
 import { Canvas } from '@react-three/fiber'
 import * as fiber from '@react-three/fiber'
 import { FiberContextProvider } from 'shadergradient'
@@ -31,7 +32,9 @@ const LCanvas = ({ children }) => {
     >
       <LControl />
       <Preload all />
-      <FiberContextProvider value={fiber}>{children}</FiberContextProvider>
+      <FiberContextProvider value={{ ...fiber, ...drei }}>
+        {children}
+      </FiberContextProvider>
     </Canvas>
   )
 }
