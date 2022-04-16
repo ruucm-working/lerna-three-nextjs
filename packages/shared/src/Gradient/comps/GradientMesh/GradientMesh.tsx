@@ -1,3 +1,4 @@
+// @ts-nocheck
 import * as React from 'react'
 import { useRef } from 'react'
 import { useFiber } from '../../../useFiber'
