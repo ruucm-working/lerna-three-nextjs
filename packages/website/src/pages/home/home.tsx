@@ -1,4 +1,5 @@
-import { GradientMesh } from 'shadergradient'
+import { GradientMesh, Button } from 'shadergradient'
+import styles from './Home.module.scss'
 
 // Dynamic import is used to prevent a payload when the website start that will include threejs r3f etc..
 // WARNING ! errors might get obfuscated by using dynamic import.
@@ -10,7 +11,12 @@ import { GradientMesh } from 'shadergradient'
 
 // dom components goes here
 const DOM = () => {
-  return <div>dom</div>
+  return (
+    <div className={styles.wrap}>
+      dom
+      <Button />
+    </div>
+  )
 }
 
 // canvas components goes here
